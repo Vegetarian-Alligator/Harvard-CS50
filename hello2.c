@@ -1,9 +1,10 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 //This is a change.
 
 int main(void) {
-string s = "David"
- printf("Hello World!\n");
+printf("Your name please: ");
+string s = GetString();
+ printf("Hello %s\n",s);
 }
