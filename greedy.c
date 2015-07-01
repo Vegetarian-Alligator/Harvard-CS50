@@ -19,7 +19,7 @@ int main (void) {
 	
 	while (--denom != -1){
 		if (count = remainder/denoms[denom]){
-			printf("%s : %i of them\n",names[denom],remainder/denoms[denom]);
+			printf("%s : %i of them\n",names[denom],count;
 			remainder-=count*denoms[denom];	
 		}
 	}
