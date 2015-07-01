@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main (void) {
-	float c = 1.0/10.0;
+	float c;
 	
 	//To avoid rounding error, we have 1 cent = 1 dollar.
 	const short denoms[]={1,5,10,25,100,500,1000,2000};
@@ -17,21 +17,12 @@ int main (void) {
 
 	printf("Your change is: ");
 	
-	while (--denom != 0){
-		/*	
-		if (count=(remainder%denoms[denom]) || denoms[denom]==remainder) {                                 //It seems assignment is much faster than mod
-			printf("%s : %i of them\n",names[denom],remainder/denoms[denom]);
-			remainder-=(remainder/denoms[denom])*denoms[denom];
-			//printf("\n(Remaining Change)%i\n",remainder);		
-		}
-		*/
-
+	while (--denom != -1){
 		if (count = remainder/denoms[denom]){
 			printf("%s : %i of them\n",names[denom],remainder/denoms[denom]);
-			remainder-=count*denoms[denom];		
+			remainder-=count*denoms[denom];	
 		}
 	}
 	
 	printf("\n\nThat was all.\n\n");
 }
-
